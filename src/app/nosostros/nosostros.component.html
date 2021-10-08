@@ -1,0 +1,95 @@
+<p>product card1!</p>
+<div class="container">
+    <div class="row">
+        <!-- inicio -->
+        <div class="col-md-3 col-sm-6" *ngFor="let pro of product" style="margin-top: 25px;">
+            <div class="card">
+                <img class="card-img-top" src="../assets/images/{{pro.a}}">
+                <div class="card-body">
+                    <h4 class="card-title">{{pro.c}}</h4>
+                    <p class="card-text">{{pro.d}}</p>
+                </div>
+                <div class="card-footer">
+                    <!-- <button class="btn btn-secondary btn-block" data-bs-toggle="modal" data-bs-target="#d"  style="cursor:pointer;">Add to Cart</button> -->
+                    <button class="btn btn-secondary btn-block"  data-toggle="modal" [attr.data-target]="'#' + pro.id" style="cursor:pointer;">Add to Cart</button>
+                    
+                    <!-- <button class="btn btn-secondary btn-block" data-bs-toggle="modal" data-bs-target="#{{pro.id}}"  style="cursor:pointer;">Add to Cart</button> -->
+                </div>
+            </div>
+            </div>
+                            <!-- sssssssssssss -->
+                <!-- sssssssssssss 2 ini -->
+                <!-- art.id  [id]="art.id" -->
+                <!-- <div class="modal fade text-center portfolio-modal" aria-labelledby="" aria-hidden="false" role="dialog" tabindex="-1" id="p01"> -->
+                <!-- <div class="modal fade text-center portfolio-modal" aria-labelledby="" aria-hidden="false" role="dialog"  tabindex="-1" [id]="'modal-' + art.id"> -->
+                    <!-- <div class="modal fade text-center portfolio-modal" aria-labelledby="" aria-hidden="true" role="dialog"  tabindex="-1" id="modal-{{art.id}}"> -->
+                    <!-- <div class="modal fade text-center portfolio-modal" aria-labelledby="" aria-hidden="true" role="dialog"  tabindex="-1" id="dialogo1">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 mx-auto">
+                                            <div class="modal-body">
+    
+                                                <div class="modal-body">
+                                                    Se borrará definitivamente: <strong>{{pro.id}}</strong>
+                                                </div>
+    
+                                                <h2 class="text-uppercase">{{pro.id}}</h2>
+                                                <p class="text-muted item-intro">rrr Lorem {{pro.id}}ipsum dolor sit amet
+                                                    consectetur.</p><img class="img-fluid d-block mx-auto"
+                                                    src="assets/images/{{pro.a}}">
+                                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet,
+                                                    consectetur
+                                                    adipisicing elit. Est blanditiis dolorem culpa incidunt minus
+                                                    dignissimos deserunt
+                                                    repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores
+                                                    repudiandae,
+                                                    nostrum, reiciendis facere nemo!</p>
+                                                <iframe src="//www.youtube.com/embed/_Wo9JxLIQYg" allowfullscreen="" frameborder="0" height="315" width="100%"></iframe>	    
+                                                <ul class="list-unstyled">
+                                                    <li>Date: January 2017</li>
+                                                    <li>Client: Threads</li>
+                                                    <li>Category: Illustration</li>
+                                                </ul><button class="btn btn-primary" data-bs-dismiss="modal"
+                                                    type="button"><i class="fa fa-times"></i><span>&nbsp;Close
+                                                        Project</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+    
+                    <!-- sssssssssssss 2 fin -->    
+                    <!-- m2m2m2m2m2m2m2m2m2m ini -->
+                    
+                    <div class="modal fade" id="{{pro.id}}">
+                    <!-- <div class="modal fade" id="d"> -->
+                    <!-- <div class="modal fade" [attr.id]="'' + pro.id"> -->
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- cabecera del diálogo -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Datos Para Comprar{{pro.id}}"</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- cuerpo del diálogo -->
+                                <div class="modal-body">
+                                    Te podemos atender en [pro.c]= el Whatsapp 320 2301234 o en el correo markanny@gmail.com too en
+                                    www.markanny.ga
+                                    Cerrar.
+                                </div>
+                                <!-- pie del diálogo -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- m2m2m2m2m2m2m2m2m2m fin -->
+                    
+    </div>
+</div>
